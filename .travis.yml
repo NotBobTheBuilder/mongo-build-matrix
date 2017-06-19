@@ -1,0 +1,17 @@
+language: python
+services:
+  - 'docker'
+python:
+  - '2.7'
+  - 'pypy'
+env:
+  - MONGOVERSION = '2.6.9'
+  - MONGOVERSION = '3.0.15'
+  - MONGOVERSION = '3.2.13'
+  - MONGOVERSION = '3.4.4'
+install:
+  - 'pip install -r requirements.txt'
+  - 'docker pull mongodb:$MONGOVERSION'
+  - 'docker run -d -p 27017:27017 mongo:$MONGOVERSION'
+script: python test.py
+
