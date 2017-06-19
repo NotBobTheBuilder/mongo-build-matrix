@@ -13,7 +13,7 @@ matrix:
   fast_finish: true
 install:
   - 'pip install -r requirements.txt'
-  - 'docker pull mongodb:$MONGOVERSION'
+  - 'docker pull mongo:$MONGOVERSION'
   - 'docker run -d -p 27017:27017 mongo:$MONGOVERSION'
 script: python test.py
 
