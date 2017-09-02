@@ -7,8 +7,8 @@ python:
 env:
   - MONGOVERSION='2.6.9'
   - MONGOVERSION='3.0.15'
-  - MONGOVERSION='3.2.13'
-  - MONGOVERSION='3.4.4'
+  - MONGOVERSION='3.2.16'
+  - MONGOVERSION='3.4.7'
 matrix:
   fast_finish: true
 install:
